@@ -1,6 +1,6 @@
-package com.group;
+package com.app;
 
-import com.group.utils.ArithmeticMenu;
+import com.app.utils.ArithmeticMenu;
 
 public class Main {
     public static void main(String[] args) {
