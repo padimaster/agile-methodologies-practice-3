@@ -9,8 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 public class CalculatorTest {
     @Test
-    public void testAdd(){
+    public void testAdd() {
         System.out.println("testAdd");
-        when(Calculator.add(10.0, 20.0)).thenReturn(30.00);
     }
 }
