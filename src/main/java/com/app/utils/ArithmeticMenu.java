@@ -6,44 +6,88 @@ public class ArithmeticMenu {
 
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Arithmetic Menu!");
-        while (true) {
-            // Display menu options
-            System.out.println("\nSelect an operation:");
-            System.out.println("1. Add");
-            System.out.println("2. Subtract");
-            System.out.println("3. Multiply");
-            System.out.println("4. Divide");
-            System.out.println("5. Exit");
-            System.out.print("Enter your choice: ");
+        System.out.println("1. Español\n2. English");
+        int opcion = scanner.nextInt();
 
-            // Get user input
-            int choice = scanner.nextInt();
+        if (opcion != 1) {
+            System.out.println("Welcome to the Arithmetic Menu!");
+            while (true) {
+                // Display menu options
+                System.out.println("\nSelect an operation:");
+                System.out.println("1. Add");
+                System.out.println("2. Subtract");
+                System.out.println("3. Multiply");
+                System.out.println("4. Divide");
+                System.out.println("5. Exit");
+                System.out.print("Enter your choice: ");
 
-            // Perform actions based on user choice
-            switch (choice) {
-                case 1:
-                    performAddition();
-                    break;
-                case 2:
-                    performSubtraction();
-                    break;
-                case 3:
-                    performMultiplication();
-                    break;
-                case 4:
-                    performDivision();
-                    break;
-                case 5:
-                    System.out.println("Exiting the program. Goodbye!");
-                    scanner.close();
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                // Get user input
+                int choice = scanner.nextInt();
+
+                // Perform actions based on user choice
+                switch (choice) {
+                    case 1:
+                        performAddition();
+                        break;
+                    case 2:
+                        performSubtraction();
+                        break;
+                    case 3:
+                        performMultiplication();
+                        break;
+                    case 4:
+                        performDivision();
+                        break;
+                    case 5:
+                        System.out.println("Exiting the program. Goodbye!");
+                        scanner.close();
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                }
+            }
+        } else {
+            System.out.println("Bienvenido al menú Arithmetic!");
+            while (true) {
+                // Display menu options
+                System.out.println("\nSeleccione una operación:");
+                System.out.println("1. Suma");
+                System.out.println("2. Resta");
+                System.out.println("3. Multiplicación");
+                System.out.println("4. División");
+                System.out.println("5. Salir");
+                System.out.print("Ingrese su opción: ");
+
+                // Get user input
+                int choice = scanner.nextInt();
+
+                // Perform actions based on user choice
+                switch (choice) {
+                    case 1:
+                        performAddition();
+                        break;
+                    case 2:
+                        performSubtraction();
+                        break;
+                    case 3:
+                        performMultiplication();
+                        break;
+                    case 4:
+                        performDivision();
+                        break;
+                    case 5:
+                        System.out.println("Exiting the program. Goodbye!");
+                        scanner.close();
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                }
             }
         }
     }
+
     private static void performAddition() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the first number: ");
